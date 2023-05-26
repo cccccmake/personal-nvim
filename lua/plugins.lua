@@ -91,25 +91,25 @@ return require('packer').startup(function(use)
 
     use 'L3MON4D3/LuaSnip' -- nvim-cmp
 
-    -- use 'hrsh7th/vim-vsnip' -- what's the difference with the 'after' event?
-    -- use {
-    --     'hrsh7th/nvim-cmp',
-    --     requires = {
-    --         { 'hrsh7th/cmp-buffer',                  after = 'nvim-cmp' },
-    --         -- 'hrsh7th/cmp-nvim-lsp',
-    --         'onsails/lspkind.nvim',
-    --         { 'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp' },
-    --         { 'hrsh7th/cmp-path',                    after = 'nvim-cmp' },
-    --         { 'hrsh7th/cmp-nvim-lua',                after = 'nvim-cmp' },
-    --         { 'saadparwaiz1/cmp_luasnip',            after = 'nvim-cmp' },
-    --         'lukas-reineke/cmp-under-comparator',
-    --         { 'hrsh7th/cmp-cmdline',                  after = 'nvim-cmp' },
-    --         { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' },
-    --     },
-    --     config = [[require('plugin_config.nvim-cmp')]],
-    --     event = 'InsertEnter',
-    --     wants = 'LuaSnip',
-    -- }
+    use 'hrsh7th/vim-vsnip' -- what's the difference with the 'after' event?
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            { 'hrsh7th/cmp-buffer',                  after = 'nvim-cmp' },
+            'hrsh7th/cmp-nvim-lsp',
+            'onsails/lspkind.nvim',
+            { 'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp' },
+            { 'hrsh7th/cmp-path',                    after = 'nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lua',                after = 'nvim-cmp' },
+            { 'saadparwaiz1/cmp_luasnip',            after = 'nvim-cmp' },
+            'lukas-reineke/cmp-under-comparator',
+            { 'hrsh7th/cmp-cmdline',                  after = 'nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' },
+        },
+        config = [[require('plugin_config.nvim-cmp')]],
+        event = 'InsertEnter',
+        wants = 'LuaSnip',
+    }
 
     -- java language server
     -- use {'mfussenegger/nvim-jdtls', config = [[require('plugin_config.jdtls')]]}
@@ -133,10 +133,10 @@ return require('packer').startup(function(use)
     }
 
     -- lsp
-    -- use {
-    --     'neovim/nvim-lspconfig',
-    --     config = [[require('plugin_config.nvim-lsp')]]
-    -- }
+    use {
+        'neovim/nvim-lspconfig',
+        config = [[require('plugin_config.nvim-lsp')]]
+    }
 
     -- Load on a combination of conditions: specific filetypes or commands
     -- Also run code after load (see the "config" key)
