@@ -91,7 +91,6 @@ return require('packer').startup(function(use)
 
     use 'L3MON4D3/LuaSnip' -- nvim-cmp
 
-    use 'hrsh7th/vim-vsnip' -- what's the difference with the 'after' event?
     use {
         'hrsh7th/nvim-cmp',
         requires = {
@@ -103,11 +102,11 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lua',                after = 'nvim-cmp' },
             { 'saadparwaiz1/cmp_luasnip',            after = 'nvim-cmp' },
             'lukas-reineke/cmp-under-comparator',
-            { 'hrsh7th/cmp-cmdline',                  after = 'nvim-cmp' },
+            {'hrsh7th/cmp-cmdline',                   after = 'nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' },
         },
         config = [[require('plugin_config.nvim-cmp')]],
-        event = 'InsertEnter',
+        -- event = 'InsertEnter', -- this affects command line completion: Only after insertion mode triggered
         wants = 'LuaSnip',
     }
 
