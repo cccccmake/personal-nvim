@@ -114,8 +114,8 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' },
         },
         config = [[require('plugin_config.nvim-cmp')]],
-        event = 'InsertEnter',
-        wants = 'LuaSnip',
+        -- event = 'InsertEnter',
+        -- wants = 'LuaSnip',
     }
 
     -- java language server

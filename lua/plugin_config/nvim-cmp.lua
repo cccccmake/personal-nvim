@@ -114,7 +114,7 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['lua_ls'].setup {
+--[[ require('lspconfig')['lua_ls'].setup {
     capabilities = capabilities
 }
 require('lspconfig')['clangd'].setup {
@@ -125,7 +125,7 @@ require('lspconfig')['jdtls'].setup {
 }
 require('lspconfig')['jsonls'].setup {
     capabilities = capabilities
-}
+} ]]
 
 -- Customization for Pmenu
 vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#282C34", fg = "NONE" })
