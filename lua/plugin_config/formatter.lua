@@ -5,7 +5,7 @@ vim.api.nvim_set_keymap("n", "<leader>F", "<cmd>FormatWrite<CR>",
 
 require("formatter").setup {
     logging = true,
-    log_level = vim.log.levels.WARN,
+    log_level = vim.log.levels.ERROR,
     filetype = {
         -- Formatter configurations for filetype "lua" go here
         -- and will be executed in order

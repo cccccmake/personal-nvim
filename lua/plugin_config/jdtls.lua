@@ -26,7 +26,7 @@ local config = {
                     -- eclipse.jdt.ls installation            Depending on your system.
     -- 💀
     -- See `data directory configuration` section in the README
-    '-data', '/path/to/unique/per/project/workspace/folder'
+    '-data', '~/Temp/'
   },
 
   -- 💀
