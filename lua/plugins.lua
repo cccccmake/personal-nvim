@@ -9,13 +9,13 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- startup
-    -- use {
-    --     "startup-nvim/startup.nvim",
-    --     requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-    --     config = function()
-    --         require"startup".setup()
-    --     end
-    -- }
+    use {
+        "startup-nvim/startup.nvim",
+        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        config = function()
+            require"startup".setup()
+        end
+    }
 
     -- vimtex
     use {'lervag/vimtex', config = [[require('plugin_config.vimtex')]]}
@@ -29,12 +29,12 @@ return require('packer').startup(function(use)
     }
 
     -- trouble
-    -- use {
-    --     "folke/trouble.nvim",
-    --     requires = {{"nvim-tree/nvim-web-devicons"}},
-    --     config = [[require('plugin_config.trouble')]],
-    --     opts = {}
-    -- }
+    use {
+        "folke/trouble.nvim",
+        requires = {{"nvim-tree/nvim-web-devicons"}},
+        config = [[require('plugin_config.trouble')]],
+        opts = {}
+    }
 
     -- nvim-lint
     use {
@@ -113,6 +113,7 @@ return require('packer').startup(function(use)
 
     -- java language server
     -- use {'mfussenegger/nvim-jdtls', config = [[require('plugin_config.jdtls')]]}
+    
     -- Lazy loading:
     -- Load on specific commands
     use {
@@ -173,6 +174,7 @@ return require('packer').startup(function(use)
 
     -- Post-install/update hook with neovim command
     -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    
     -- Post-install/update hook with call of vimscript function with argument
     use {
         'glacambre/firenvim',
