@@ -12,6 +12,7 @@ end
 local cmp = require'cmp'
 local luasnip = require'luasnip'
 cmp.setup({
+    view = 'native',
     -- completion = { completeopt = 'menu,menuone,noselect' },
     sorting = {
         comparators = {
