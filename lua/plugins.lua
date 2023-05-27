@@ -89,10 +89,20 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
-    use 'L3MON4D3/LuaSnip' -- nvim-cmp
+    use 'L3MON4D3/LuaSnip'
 
+    -- use{
+    --     {
+    --         'L3MON4D3/LuaSnip',
+    --         opt = true,
+    --     },
+    --     'rafamadriz/friendly-snippets',
+    -- }
+
+    -- nvim-cmp
     use {
         'hrsh7th/nvim-cmp',
+        opt = false,
         requires = {
             { 'hrsh7th/cmp-buffer',                  after = 'nvim-cmp' },
             'hrsh7th/cmp-nvim-lsp',
@@ -106,13 +116,13 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' },
         },
         config = [[require('plugin_config.nvim-cmp')]],
-        -- event = 'InsertEnter', -- this affects command line completion: Only after insertion mode triggered
+        event = 'InsertEnter', -- this affects command line completion: Only after insertion mode triggered
         wants = 'LuaSnip',
     }
 
     -- java language server
     -- use {'mfussenegger/nvim-jdtls', config = [[require('plugin_config.jdtls')]]}
-    
+
     -- Lazy loading:
     -- Load on specific commands
     use {
