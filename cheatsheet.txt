@@ -1,3 +1,6 @@
 This nvim config is largely inspired by shrik3/schnizel.nvim
 
-
+--- Buffer Related ---
+CTRL-w close -> current buffer
+ALT-TAB -> next buffer
+SHIFT-TAB -> previous buffer
