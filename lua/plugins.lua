@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
         tag = '*',
         config = [[require('plugin_config.toggleterm')]]
     }
+
     -- nerdtree
     use 'preservim/nerdtree'
 
@@ -91,8 +92,8 @@ return require('packer').startup(function(use)
 
     -- auto pair
     use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
+        'jiangmiao/auto-pairs',
+        -- config = require("auto-pairs").setup()
     }
 
     use 'L3MON4D3/LuaSnip'
