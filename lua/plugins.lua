@@ -1,7 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vimd
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
-vim.o.showtabline = 2
+-- vim.o.showtabline = 2
 
 return require('packer').startup(function(use)
 
@@ -21,12 +21,12 @@ return require('packer').startup(function(use)
     use {'lervag/vimtex', config = [[require('plugin_config.vimtex')]]}
 
     -- bufferline
-    use {
-        'akinsho/bufferline.nvim',
-        tag = "*",
-        requires = 'nvim-tree/nvim-web-devicons',
-        config = [[require('plugin_config.bufferline')]]
-    }
+    -- use {
+    --     'akinsho/bufferline.nvim',
+    --     tag = "*",
+    --     requires = 'nvim-tree/nvim-web-devicons',
+    --     config = [[require('plugin_config.bufferline')]]
+    -- }
 
     -- trouble
     use {
@@ -56,6 +56,12 @@ return require('packer').startup(function(use)
     }
     -- nerdtree
     use 'preservim/nerdtree'
+
+    -- scope
+    use {
+        'romgrk/barbar.nvim',
+        config = [[require('plugin_config.barbar')]],
+    }
 
     -- telescope for fuzzy searching
     use {
