@@ -1,3 +1,5 @@
+set termguicolors
+
 lua << END
     require('plugins')
 END
@@ -23,9 +25,9 @@ set autoindent              " indent a new line the same amount as the line just
 set cc=80                   " set an 80 column border for good coding style
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
-set wildmenu
+" set wildmenu
 " set wildmode=longest, list  " get bash-like tab completions
-set completeopt=longest,menuone
+" set completeopt=longest,menuone
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.exe,*.flv,*.img,*.xlsx
 set ttyfast                 " Speed up scrolling in Vim
 set noswapfile              " disable creating swap file

@@ -13,20 +13,20 @@ return require('packer').startup(function(use)
         "startup-nvim/startup.nvim",
         requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
         config = function()
-            require"startup".setup()
+            require("startup").setup()
+        end
+    }
+
+    -- colorizer
+    use{
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require("colorizer").setup()
         end
     }
 
     -- vimtex
     use {'lervag/vimtex', config = [[require('plugin_config.vimtex')]]}
-
-    -- bufferline
-    -- use {
-    --     'akinsho/bufferline.nvim',
-    --     tag = "*",
-    --     requires = 'nvim-tree/nvim-web-devicons',
-    --     config = [[require('plugin_config.bufferline')]]
-    -- }
 
     -- trouble
     use {
@@ -96,14 +96,6 @@ return require('packer').startup(function(use)
     }
 
     use 'L3MON4D3/LuaSnip'
-
-    -- use{
-    --     {
-    --         'L3MON4D3/LuaSnip',
-    --         opt = true,
-    --     },
-    --     'rafamadriz/friendly-snippets',
-    -- }
 
     -- nvim-cmp
     use {
