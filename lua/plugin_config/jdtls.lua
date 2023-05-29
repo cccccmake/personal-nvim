@@ -62,31 +62,31 @@ local config = {
     -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
     -- for a list of options
     settings = {
-        java = {
-            eclipse = {downloadSources = true},
-            maven = {downloadSources = true},
-            configuration = {
-                updateBuildConfiguration = "interactive",
-                runtimes = {
-                    {
-                        name = 'JavaSE-17',
-                        path = '/usr/lib/jvm/java-17-openjdk/bin/java',
-                    },
-                    {
-                        name = 'JavaSE-20',
-                        path = '/usr/lib/jvm/java-20-openjdk/bin/java',
-                        default = true,
-                    }
-                }
-            },
-            implementationsCodeLens = {enabled = true},
-            referencesCodeLens = {enabled = true},
-            references = {includeDecompiledSources = true},
-            inlayHints = {parameterNames = {enabled = true}},
-            format = {enabled = false}
-        },
-        signatureHelp = {enabled = true},
-        extendedClientCapabilities = extendedClientCapabilities,
+        -- java = {
+        --     eclipse = {downloadSources = true},
+        --     maven = {downloadSources = true},
+        --     configuration = {
+        --         updateBuildConfiguration = "interactive",
+        --         runtimes = {
+        --             {
+        --                 name = 'JavaSE-17',
+        --                 path = '/usr/lib/jvm/java-17-openjdk/bin/java',
+        --             },
+        --             {
+        --                 name = 'JavaSE-20',
+        --                 path = '/usr/lib/jvm/java-20-openjdk/bin/java',
+        --                 default = true,
+        --             }
+        --         }
+        --     },
+        --     implementationsCodeLens = {enabled = true},
+        --     referencesCodeLens = {enabled = true},
+        --     references = {includeDecompiledSources = true},
+        --     inlayHints = {parameterNames = {enabled = true}},
+        --     format = {enabled = false}
+        -- },
+        -- signatureHelp = {enabled = true},
+        -- extendedClientCapabilities = extendedClientCapabilities,
     },
     -- Language server `initializationOptions`
     -- You need to extend the `bundles` with paths to jar files
@@ -99,9 +99,6 @@ local config = {
     --     -- bundles = {},
     --     bundles = bundles
     -- }
-    on_init = function(client)
-        client.notify('workspace/didChangeConfiguration', { settings = client.config.settings })
-    end
 }
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.

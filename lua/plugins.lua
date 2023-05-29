@@ -121,11 +121,11 @@ return require('packer').startup(function(use)
     }
 
     -- java language server
-    use {
-        'mfussenegger/nvim-jdtls',
-        ft = {'java'},
-        config = [[require('plugin_config.jdtls')]]
-    }
+    -- use {
+    --     'mfussenegger/nvim-jdtls',
+    --     ft = {'java'},
+    --     config = [[require('plugin_config.jdtls')]]
+    -- }
 
     -- Lazy loading:
     -- Load on specific commands
@@ -187,7 +187,7 @@ return require('packer').startup(function(use)
 
     -- Post-install/update hook with neovim command
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    
+
     -- Post-install/update hook with call of vimscript function with argument
     use {
         'glacambre/firenvim',
@@ -202,10 +202,7 @@ return require('packer').startup(function(use)
     }
 
     -- You can specify multiple plugins in a single call
-    use {
-        'tjdevries/colorbuddy.vim',
-        {'nvim-treesitter/nvim-treesitter', opt = true}
-    }
+    use {'tjdevries/colorbuddy.vim'}
 
     -- You can alias plugin names
     use {'dracula/vim', as = 'dracula'}
