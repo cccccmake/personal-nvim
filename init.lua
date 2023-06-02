@@ -26,9 +26,10 @@ vim.cmd([[
 -- signature for mapping keys
 -- vim.api.nvim_set_keymap(mode, keys, mapping, options)
 -- map leader
-vim.g.mapleader = "<SPACE>"
+vim.g.mapleader = " "
 -- cancel the highlighted parts
-vim.api.nvim_set_keymap('n', "<Space><Enter>", ":nohlsearch<CR>", {noremap = true})
+vim.api.nvim_set_keymap('n', "<Space><Enter>", ":nohlsearch<CR>",
+                        {noremap = true})
 
 -- navigate among the splitted windows
 vim.api.nvim_set_keymap('n', "<c-j>", "<c-w>j", {noremap = true})
