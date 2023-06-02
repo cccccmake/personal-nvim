@@ -123,7 +123,7 @@ return require('packer').startup(function(use)
     -- java language server
     -- use {
     --     'mfussenegger/nvim-jdtls',
-    --     ft = {'java'},
+    --     -- ft = {'java'},
     --     config = [[require('plugin_config.jdtls')]]
     -- }
 
