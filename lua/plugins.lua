@@ -25,8 +25,17 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- nvim-ufo for ultra folder
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async'
+    }
+
     -- vimtex
-    use {'lervag/vimtex', config = [[require('plugin_config.vimtex')]]}
+    use {
+        'lervag/vimtex',
+        config = [[require('plugin_config.vimtex')]]
+    }
 
     -- trouble
     use {
@@ -75,11 +84,17 @@ return require('packer').startup(function(use)
     -- tokyonight color scheme
     use 'folke/tokyonight.nvim'
 
+    -- catppuccin color scheme
+    use {
+        "catppuccin/nvim",
+        as = "catppuccin"
+    }
+
     -- vim-devicons
     use 'ryanoasis/vim-devicons'
 
     -- enable the colorscheme tokyonight
-    vim.cmd [[colorscheme tokyonight]]
+    -- vim.cmd [[colorscheme tokyonight]]
 
     -- Simple plugins can be specified as strings
     use 'rstacruz/vim-closer'
