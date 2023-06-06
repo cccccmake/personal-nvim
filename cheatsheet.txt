@@ -18,3 +18,4 @@ gcc -> comment/uncomment code
 -- Fuzzy Searching (Telescope) ---
 SPACE-f-f -> toggle telescope
 SPACE-l-g -> live grep of telescope
+SPACE-f-b -> telescope file browser
