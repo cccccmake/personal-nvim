@@ -1,6 +1,5 @@
 -- signature for mapping keys
 -- vim.api.nvim_set_keymap(mode, keys, mapping, options)
-
 -- map leader
 vim.g.mapleader = " "
 -- cancel the highlighted parts
@@ -29,3 +28,7 @@ vim.o.foldenable = true
 
 vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
 vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+
+-- telescope file browser
+vim.api.nvim_set_keymap("n", "<space>fb", ":Telescope file_browser",
+                        {noremap = true})

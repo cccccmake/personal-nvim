@@ -3,7 +3,7 @@ vim.opt.termguicolors = true
 vim.cmd([[
     set nocompatible
     set smarttab
-    set number
+    set number                  " line number
     set cursorline              " highlight current cursorline
     set expandtab               " converts tabs to white space
     set tabstop=4               " number of columns occupied by a tab
@@ -21,7 +21,7 @@ vim.cmd([[
     set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.exe,*.flv,*.img,*.xlsx
     set ttyfast                 " Speed up scrolling in Vim
     set noswapfile              " disable creating swap file
-    colorscheme catppuccin-mocha
+    colorscheme catppuccin-mocha" set color scheme
 ]])
 
 require("plugins")

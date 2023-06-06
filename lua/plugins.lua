@@ -12,30 +12,26 @@ return require('packer').startup(function(use)
     use {
         "startup-nvim/startup.nvim",
         requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-        config = function()
-            require("startup").setup()
-        end
+        config = function() require("startup").setup() end
+    }
+
+    -- telescope-file-browser
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
     }
 
     -- colorizer
-    use{
+    use {
         'norcalli/nvim-colorizer.lua',
-        config = function()
-            require("colorizer").setup()
-        end
+        config = function() require("colorizer").setup() end
     }
 
     -- nvim-ufo for ultra folder
-    use {
-        'kevinhwang91/nvim-ufo',
-        requires = 'kevinhwang91/promise-async'
-    }
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
     -- vimtex
-    use {
-        'lervag/vimtex',
-        config = [[require('plugin_config.vimtex')]]
-    }
+    use {'lervag/vimtex', config = [[require('plugin_config.vimtex')]]}
 
     -- trouble
     use {
@@ -68,10 +64,7 @@ return require('packer').startup(function(use)
     use 'preservim/nerdtree'
 
     -- scope
-    use {
-        'romgrk/barbar.nvim',
-        config = [[require('plugin_config.barbar')]],
-    }
+    use {'romgrk/barbar.nvim', config = [[require('plugin_config.barbar')]]}
 
     -- telescope for fuzzy searching
     use {
@@ -85,10 +78,7 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
 
     -- catppuccin color scheme
-    use {
-        "catppuccin/nvim",
-        as = "catppuccin"
-    }
+    use {"catppuccin/nvim", as = "catppuccin"}
 
     -- vim-devicons
     use 'ryanoasis/vim-devicons'
@@ -107,7 +97,7 @@ return require('packer').startup(function(use)
 
     -- auto pair
     use {
-        'jiangmiao/auto-pairs',
+        'jiangmiao/auto-pairs'
         -- config = require("auto-pairs").setup()
     }
 
@@ -117,22 +107,21 @@ return require('packer').startup(function(use)
     use {
         'hrsh7th/nvim-cmp',
         requires = {
-            { 'hrsh7th/cmp-buffer',                  after = 'nvim-cmp' },
-            'hrsh7th/cmp-nvim-lsp',
+            {'hrsh7th/cmp-buffer', after = 'nvim-cmp'}, 'hrsh7th/cmp-nvim-lsp',
             'onsails/lspkind.nvim',
-            { 'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp' },
-            { 'hrsh7th/cmp-path',                    after = 'nvim-cmp' },
-            { 'hrsh7th/cmp-nvim-lua',                after = 'nvim-cmp' },
-            { 'saadparwaiz1/cmp_luasnip',            after = 'nvim-cmp' },
+            {'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp'},
+            {'hrsh7th/cmp-path', after = 'nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp'},
+            {'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp'},
             'lukas-reineke/cmp-under-comparator',
-            {'hrsh7th/cmp-cmdline',                   after = 'nvim-cmp' },
-            { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' },
+            {'hrsh7th/cmp-cmdline', after = 'nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp'}
         },
         config = [[require('plugin_config.nvim-cmp')]],
-        -- event = 'InsertEnter', 
+        -- event = 'InsertEnter',
         -- this affects command line completion: Only after insertion mode triggered
         -- as well as the cmp load... wtf...
-        wants = 'LuaSnip',
+        wants = 'LuaSnip'
     }
 
     -- java language server
@@ -201,7 +190,7 @@ return require('packer').startup(function(use)
     }
 
     -- Post-install/update hook with neovim command
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
     -- Post-install/update hook with call of vimscript function with argument
     use {

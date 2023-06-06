@@ -1,6 +1,20 @@
 This nvim config is largely inspired by shrik3/schnizel.nvim
 
 --- Buffer Related ---
-CTRL-w close -> current buffer
-ALT-TAB -> next buffer
-SHIFT-TAB -> previous buffer
+CTRL-w -> close current buffer
+ALT-TAB -> jump to next buffer
+SHIFT-TAB -> jump to previous buffer
+
+--- Coding ---
+zR -> fold the brackets
+zM -> unfold the brackets
+CTRL-t -> toggle terminal within nvim
+SPACE-f -> format code
+gcc -> comment/uncomment code
+
+--- File Related ---
+<F3> -> toggle nerdtree
+
+-- Fuzzy Searching (Telescope) ---
+SPACE-f-f -> toggle telescope
+SPACE-l-g -> live grep of telescope
