@@ -15,6 +15,9 @@ return require('packer').startup(function(use)
         config = function() require("startup").setup() end
     }
 
+    -- tagbar
+    use "preservim/tagbar"
+
     -- telescope-file-browser
     use {
         "nvim-telescope/telescope-file-browser.nvim",
@@ -26,9 +29,6 @@ return require('packer').startup(function(use)
         'norcalli/nvim-colorizer.lua',
         config = function() require("colorizer").setup() end
     }
-
-    -- nvim-ufo for ultra folder
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
     -- vimtex
     use {'lervag/vimtex', config = [[require('plugin_config.vimtex')]]}

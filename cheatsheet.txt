@@ -6,8 +6,6 @@ ALT-TAB -> jump to next buffer
 SHIFT-TAB -> jump to previous buffer
 
 --- Coding ---
-zR -> fold the brackets
-zM -> unfold the brackets
 CTRL-t -> toggle terminal within nvim
 SPACE-f -> format code
 gcc -> comment/uncomment code

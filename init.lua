@@ -1,6 +1,7 @@
 -- required by colorizer
 vim.opt.termguicolors = true
 vim.cmd([[
+    set guifontwide=*
     set nocompatible
     set smarttab
     set number                  " line number
@@ -15,6 +16,9 @@ vim.cmd([[
     set ignorecase              " case insensitive
     set hlsearch                " highlight search
     set autoindent              " indent a new line the same amount as the line just typed
+    set termencoding=utf-8
+    set encoding=utf-8
+    set fileencoding=utf-8
     set cc=80                   " set an 80 column border for good coding style
     set mouse=a                 " enable mouse click
     set clipboard=unnamedplus   " using system clipboard
