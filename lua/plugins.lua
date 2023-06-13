@@ -1,5 +1,10 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vimd
 -- Only required if you have packer configured as `opt`
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+end
 vim.cmd [[packadd packer.nvim]]
 -- vim.o.showtabline = 2
 
@@ -145,8 +150,8 @@ return require('packer').startup(function(use)
     -- lua line
     use {
         'nvim-lualine/lualine.nvim',
-        requires = {'nvim-tree/nvim-web-devicons', opt = true},
-        config = require('lualine').setup()
+        -- requires = {'nvim-tree/nvim-web-devicons', opt = true},
+        -- config = require('lualine').setup()
     }
 
     -- lsp
@@ -210,5 +215,9 @@ return require('packer').startup(function(use)
 
     -- You can alias plugin names
     use {'dracula/vim', as = 'dracula'}
+
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 
 end)

@@ -1,5 +1,4 @@
--- required by colorizer
-vim.opt.termguicolors = true
+
 vim.cmd([[
     set guifontwide=*
     set nocompatible
@@ -27,5 +26,4 @@ vim.cmd([[
     set noswapfile              " disable creating swap file
     colorscheme catppuccin-mocha" set color scheme
 ]])
-require("plugins")
-require("keymapping")
+
