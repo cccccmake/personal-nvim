@@ -1,5 +1,7 @@
 This nvim config is largely inspired by shrik3/schnizel.nvim
 
+Please be aware you need to debug somehow...
+
 --- Buffer Related ---
 CTRL-w -> close current buffer
 ALT-TAB -> jump to next buffer
