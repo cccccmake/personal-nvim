@@ -1,31 +1,41 @@
 -- required by colorizer
 vim.opt.termguicolors = true
-vim.cmd([[
-    set guifontwide=*
-    set nocompatible
-    set smarttab
-    set number                  " line number
-    set cursorline              " highlight current cursorline
-    set expandtab               " converts tabs to white space
-    set tabstop=4               " number of columns occupied by a tab
-    set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
-    set shiftwidth=4            " width for autoindents
-    set nowrap
-    set incsearch               " incremental search
-    set showmatch               " show matching
-    set ignorecase              " case insensitive
-    set hlsearch                " highlight search
-    set autoindent              " indent a new line the same amount as the line just typed
-    set termencoding=utf-8
-    set encoding=utf-8
-    set fileencoding=utf-8
-    set cc=80                   " set an 80 column border for good coding style
-    set mouse=a                 " enable mouse click
-    set clipboard=unnamedplus   " using system clipboard
-    set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.exe,*.flv,*.img,*.xlsx
-    set ttyfast                 " Speed up scrolling in Vim
-    set noswapfile              " disable creating swap file
-    colorscheme catppuccin-mocha" set color scheme
-]])
+-- wrap settings
+vim.opt.wrap = true
+vim.opt.textwidth=0
+vim.opt.wrapmargin=0
+vim.opt.columns=80
+-- vim.opt.formatoptions:remove('l')
+-- vim.opt.formatoptions:append('t')
+-- -- this causes trouble breaking lines whose len < 80
+-- vim.opt.formatoptions:append('a')
+vim.opt.tabstop=4
+vim.opt.softtabstop=4
+vim.opt.shiftwidth=4
+-- encoding settings
+vim.opt.termencoding="utf-8"
+vim.opt.encoding="utf-8"
+vim.opt.fileencoding="utf-8"
+vim.opt.mouse="a"
+-- clipboard
+vim.opt.clipboard="unnamedplus"
+-- some other things
+vim.opt.compatible = false
+vim.opt.smarttab = true
+vim.opt.number = true
+vim.opt.cursorline = true
+vim.opt.expandtab = true
+vim.opt.linebreak = true
+vim.opt.incsearch = true
+vim.opt.showmatch = true
+vim.opt.ignorecase = true
+vim.opt.hlsearch = true
+vim.opt.autoindent = true
+vim.opt.ttyfast = true
+vim.opt.swapfile = false
+-- set colorscheme
+vim.cmd.guifont="*" -- original: set guifontwide = *
+vim.cmd.colorscheme "catppuccin-mocha"
+--load plugins and keymappings
 require("plugins")
 require("keymapping")
