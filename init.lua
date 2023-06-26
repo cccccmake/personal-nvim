@@ -2,11 +2,11 @@
 vim.opt.termguicolors = true
 -- wrap settings
 vim.opt.wrap = true
-vim.opt.textwidth=0
-vim.opt.wrapmargin=0
+vim.opt.textwidth=80
+vim.opt.wrapmargin=2
 vim.opt.columns=80
--- vim.opt.formatoptions:remove('l')
--- vim.opt.formatoptions:append('t')
+vim.opt.formatoptions:remove('l')
+vim.opt.formatoptions:append('t')
 -- -- this causes trouble breaking lines whose len < 80
 -- vim.opt.formatoptions:append('a')
 vim.opt.tabstop=4
