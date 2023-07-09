@@ -120,7 +120,7 @@ return require('packer').startup(function(use)
             'hrsh7th/cmp-nvim-lsp',
             'onsails/lspkind.nvim',
             'lukas-reineke/cmp-under-comparator',
-            {'hrsh7th/cmp-omni', after = 'nvim-cmp'},
+            -- {'hrsh7th/cmp-omni', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp'},
             {'hrsh7th/cmp-path', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp'},
