@@ -15,10 +15,14 @@ return require('packer').startup(function(use)
 
     -- startup
     use {
-        "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-        config = function() require("startup").setup() end
+        'mhinz/vim-startify',
+        config = [[require 'plugin_config.startify']]
     }
+    -- use {
+    --     "startup-nvim/startup.nvim",
+    --     requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    --     config = function() require("startup").setup() end
+    -- }
 
     -- tagbar
     use "preservim/tagbar"
@@ -112,13 +116,15 @@ return require('packer').startup(function(use)
     use {
         'hrsh7th/nvim-cmp',
         requires = {
-            {'hrsh7th/cmp-buffer', after = 'nvim-cmp'}, 'hrsh7th/cmp-nvim-lsp',
+            {'hrsh7th/cmp-buffer', after = 'nvim-cmp'},
+            'hrsh7th/cmp-nvim-lsp',
             'onsails/lspkind.nvim',
+            'lukas-reineke/cmp-under-comparator',
+            {'hrsh7th/cmp-omni', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp-signature-help', after = 'nvim-cmp'},
             {'hrsh7th/cmp-path', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp'},
             {'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp'},
-            'lukas-reineke/cmp-under-comparator',
             {'hrsh7th/cmp-cmdline', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp'}
         },

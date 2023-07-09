@@ -77,6 +77,7 @@ cmp.setup({
         { name = 'nvim_lua' },
         { name = 'path' },
         { name = 'buffer', keyword_length = 3 },
+        { name = 'omni', keyword_length = 0},
     })
 })
 
