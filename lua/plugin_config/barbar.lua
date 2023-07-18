@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 -- Move to previous/next
 map('n', '<S-TAB>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-TAB>', '<Cmd>BufferNext<CR>', opts)
+map('n', '<C-TAB>', '<Cmd>BufferNext<CR>', opts)
 -- Re-order to previous/next
 map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
 map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
@@ -21,7 +21,7 @@ map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 -- Pin/unpin buffer
 map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
-map('n', '<C-w>', '<Cmd>BufferClose<CR>', opts)
+map('n', '<C-S-w>', '<Cmd>BufferClose<CR>', opts)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands

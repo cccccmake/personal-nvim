@@ -4,7 +4,8 @@ if not status_ok then
 end
 
 require("toggleterm").setup{
-    open_mapping = [[<c-t>]]
+    open_mapping = [[<c-t>]],
+    shell = vim.o.shell,
 }
 
 function _G.set_terminal_keymaps()

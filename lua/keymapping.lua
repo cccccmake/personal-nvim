@@ -21,6 +21,9 @@ vim.api.nvim_set_keymap('n', "<c-right>", "<c-w><", {noremap = true})
 -- nerdtree mapping
 vim.api.nvim_set_keymap('n', "<F3>", ":NERDTreeToggle<CR>", {noremap = true})
 
+-- markdown preview toggle
+vim.api.nvim_set_keymap('n', "mk", ":MarkdownPreview", {noremap = true})
+
 -- telescope file browser
 vim.api.nvim_set_keymap("n", "<space>fb", ":Telescope file_browser",
                         {noremap = true})

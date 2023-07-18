@@ -156,8 +156,8 @@ return require('packer').startup(function(use)
     -- lua line
     use {
         'nvim-lualine/lualine.nvim',
-        -- requires = {'nvim-tree/nvim-web-devicons', opt = true},
-        -- config = require('lualine').setup()
+        requires = {'nvim-tree/nvim-web-devicons', opt = true},
+        config = [[require('plugin_config.lualine')]],
     }
 
     -- lsp
@@ -194,11 +194,12 @@ return require('packer').startup(function(use)
     use_rocks {'lua-resty-http', 'lpeg'}
 
     -- Plugins can have post-install/update hooks
-    use {
-        'iamcco/markdown-preview.nvim'
-        -- run = 'cd app && yarn install',
-        -- cmd = 'MarkdownPreview'
-    }
+    use ({
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn["mkdp#util#install"]() end,
+        ft = { "markdown" },
+        config = [[require'plugin_config.markdown-preview']]
+    })
 
     -- Post-install/update hook with neovim command
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}

@@ -21,6 +21,7 @@ vim.opt.mouse="a"
 vim.opt.clipboard="unnamedplus"
 -- some other things
 vim.opt.compatible = false
+vim.opt.modifiable = true
 vim.opt.smarttab = true
 vim.opt.number = true
 vim.opt.cursorline = true
@@ -33,6 +34,7 @@ vim.opt.hlsearch = true
 vim.opt.autoindent = true
 vim.opt.ttyfast = true
 vim.opt.swapfile = false
+vim.opt.shell = '/usr/bin/zsh'
 -- set colorscheme
 vim.cmd.guifont="*" -- original: set guifontwide = *
 vim.cmd.colorscheme "catppuccin-mocha"
