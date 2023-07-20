@@ -2,15 +2,96 @@ This nvim config is largely inspired by shrik3/schnizel.nvim
 
 Please be aware you need to debug somehow...
 
+--- Plugins Overview ---
+ • Comment.nvim
+ • LuaSnip
+ • auto-pairs - for parentheses auto pair
+ • barbar.nvim - browser-like tabs
+ • catppuccin - main theme for the text editor
+ --- cmp family begin ---
+ • nvim-cmp
+ • cmp-buffer  
+ • cmp-cmdline
+ • cmp-nvim-lsp
+ • cmp-nvim-lsp-document-symbol
+ • cmp-nvim-lsp-signature-help
+ • cmp-nvim-lua
+ • cmp-path
+ • cmp-under-comparator
+ • cmp_luasnip
+ --- cmp family end ---
+ • colorbuddy.vim
+ • completion-nvim (not loaded)
+ • dracula
+ • firenvim
+ • formatter.nvim - format the current buffer
+ • gitsigns.nvim
+ • goto-preview - list all available functions within the current buffer
+ • lspkind.nvim
+ • lualine.nvim - status line
+ • markdown-preview - preview markdown in pdf format
+ • nerdtree - file broswer
+ • nvim-colorizer.lua
+ • nvim-lspconfig - lsp config for the text editor, available language servers on github
+ • nvim-treesitter - syntax highlight
+ • nvim-web-devicons - icons for file types
+ • packer.nvim - plugin manager
+ • plenary.nvim
+ • tagbar
+ --- telescope family ---
+ • telescope-file-browser.nvim
+ • telescope.nvim
+ --- telescope family end ---
+ • toggleterm.nvim - toggle terminal within the buffer
+ • tokyonight.nvim - text editor color theme (unused)
+ • trouble.nvim - error info log
+ • vim-closer
+ • vim-devicons
+ • vim-dispatch (not loaded)
+ • vim-matchup
+ • vim-startify - the startup screen
+ • vim-vsnip (not loaded)
+ • vim-vsnip-integ (not loaded)
+ • vimtex - latex file compiler
+
+=== Shortcuts ===
+
+--- Basic Navigation ---
+j -> downwords
+k -> upwards
+h -> go left
+l -> go right
+e -> go left with step len(word)
+
+--- Basic Operation ---
+i -> insert under the cursor
+I -> insert at the start of the current line
+o -> jump to the next line and enter the insert mode
+O -> jump to the previous line and enter the insert mode
+a -> append after the current cursor
+A -> append at the end of the current line
+c -> change the alphabet under the cursor
+C -> change the current line
+:w -> write current buffer
+:q -> quite the editor
+yy -> yank the current line into the clipboard
+yw -> yank the current word
+cw -> change the current word
+dw -> delete current word
+dd -> delete current line
+
 --- Buffer Related ---
-CTRL-w -> close current buffer
-ALT-TAB -> jump to next buffer
+CTRL-SHIFT-w -> close current buffer
+CTRL-TAB -> jump to next buffer
 SHIFT-TAB -> jump to previous buffer
 
 --- Coding ---
-CTRL-t -> toggle terminal within nvim
-SPACE-f -> format code
+<F8> -> toggle the list of the available functions
+<normal>: CTRL-t -> toggle terminal within nvim
+<normal>: <number>-CTRL-t -> toggle terminal with number
 gcc -> comment/uncomment code
+mk -> preview markdown file as pdf in vimb browser
+\f -> format current buffer
 
 --- File Related ---
 <F3> -> toggle nerdtree
