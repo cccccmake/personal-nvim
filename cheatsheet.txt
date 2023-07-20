@@ -64,6 +64,8 @@ l -> go right
 e -> go left with step len(word)
 
 --- Basic Operation ---
+u -> undo
+CTRL-r -> un-undo
 i -> insert under the cursor
 I -> insert at the start of the current line
 o -> jump to the next line and enter the insert mode
@@ -79,6 +81,7 @@ yw -> yank the current word
 cw -> change the current word
 dw -> delete current word
 dd -> delete current line
+Vgq -> reformat the current line, cut it and put the rest into new lines
 
 --- Buffer Related ---
 CTRL-SHIFT-w -> close current buffer
